@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: velero-dr-restore
+  namespace: velero
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: velero
+          image: velero/velero:v1.13.0
+          command:
+            - /bin/sh
+            - -c
+            - |
+              velero restore create dr-restore --from-backup daily-backup-latest --include-namespaces "*"

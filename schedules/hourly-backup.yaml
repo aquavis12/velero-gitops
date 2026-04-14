@@ -1,0 +1,11 @@
+apiVersion: velero.io/v1
+kind: Schedule
+metadata:
+  name: hourly-backup
+  namespace: velero
+spec:
+  schedule: "0 * * * *"
+  template:
+    includedNamespaces:
+      - prod
+    ttl: 168h0m0s
