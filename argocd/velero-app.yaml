@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/aquavis12/velero-config.git
+    repoURL: https://github.com/aquavis12/velero-gitops.git
     targetRevision: main
-    path: .
+    path: clusters/primary
   destination:
     server: https://kubernetes.default.svc
     namespace: velero

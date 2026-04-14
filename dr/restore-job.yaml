@@ -14,4 +14,4 @@ spec:
             - /bin/sh
             - -c
             - |
-              velero restore create dr-restore --from-backup daily-backup-latest --include-namespaces "*"
+              velero restore create dr-restore --from-backup latest --include-namespaces "*"

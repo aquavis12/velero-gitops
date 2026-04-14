@@ -8,4 +8,4 @@ spec:
   objectStorage:
     bucket: velero-primary-bucket
   config:
-    region: us-east-1
+    region: ap-south-1
